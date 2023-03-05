@@ -4,18 +4,13 @@ import java.util.function.*;
 
 public class Main {
     public static void main(String[] args) {
-        Predicate<Integer> predicate = new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) {
-                if (integer > 0) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        };
-        Predicate<Integer>predicate1=integer -> integer >0;
-        System.out.println(predicate.test(2));
-        System.out.println(predicate1.test(-10));
+       Function<Double,Long>function=new Function<Double, Long>() {
+           @Override
+           public Long apply(Double aDouble) {
+               return Math.round(aDouble);
+           }
+       };
+        Function<Double,Long>function1=function2 ->Math.round(function2);
     }
+
 }
