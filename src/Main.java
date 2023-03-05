@@ -4,18 +4,16 @@ import java.util.function.*;
 
 public class Main {
     public static void main(String[] args) {
-        Predicate<Integer> predicate = new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) {
-                if (integer > 0) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        };
-        Predicate<Integer>predicate1=integer -> integer >0;
-        System.out.println(predicate.test(2));
-        System.out.println(predicate1.test(-10));
+       Consumer<String>consumer=new Consumer<String>(){
+           @Override
+           public void accept(String s){
+               System.out.println("Привет "+s);
+           }
+       };
+       Consumer<String>consumer1=s -> System.out.println("Привет "+s);
+        consumer.accept("KK");
+        consumer1.accept("KKL");
+
     }
+
 }
