@@ -10,7 +10,7 @@ public class Main {
                return Math.round(aDouble);
            }
        };
-        Function<Double,Long>function1=function2 ->Math.round(function2);
+        Function<Double,Long>function1=y ->Math.round(y);
     }
 
 }
