@@ -4,16 +4,13 @@ import java.util.function.*;
 
 public class Main {
     public static void main(String[] args) {
-       Consumer<String>consumer=new Consumer<String>(){
+       Function<Double,Long>function=new Function<Double, Long>() {
            @Override
-           public void accept(String s){
-               System.out.println("Привет "+s);
+           public Long apply(Double aDouble) {
+               return Math.round(aDouble);
            }
        };
-       Consumer<String>consumer1=s -> System.out.println("Привет "+s);
-        consumer.accept("KK");
-        consumer1.accept("KKL");
-
+        Function<Double,Long>function1=function2 ->Math.round(function2);
     }
 
 }
