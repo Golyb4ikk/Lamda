@@ -8,6 +8,12 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
+        Stream<Person>personStream=Stream.of(new Person("LLL",23),new Person("KKK",24));
+        BiConsumer<Person,Person>biConsumer=(min,max)-> System.out.println(min.toString()+max.toString());
+        Comparator<Person>personComparator=Comparator.comparing(Person::getAge).thenComparing(Person::getName);
+        findMinMax(personStream,personComparator,biConsumer);
+
+        findCountEvenNums(List.of(1,2,3,4));
 
     }
 
